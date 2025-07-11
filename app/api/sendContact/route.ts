@@ -18,7 +18,7 @@ export async function POST(req: Request) {
   
 
   const mailOptions = {
-    from: `"Sanidhya Mehra" <${process.env.EMAIL_USER}>`,
+    from: `"Haseeb Asif" <${process.env.EMAIL_USER}>`,
     to: email,
     replyTo: "mymail@gmail.com",
     subject: "We received your message",
@@ -178,7 +178,7 @@ export async function POST(req: Request) {
             <p>If you need to add more details or have further questions in the meantime, please don't hesitate to reply directly to this email..</p>
             <div class="salutation">
                 <p>We appreciate your patience!</p>
-                <p>Best regards,<br><strong>Sanidhya Mehra</strong></p>
+                <p>Best regards,<br><strong>Haseeb Asif</strong></p>
             </div>
           </div>
           <div class="footer">

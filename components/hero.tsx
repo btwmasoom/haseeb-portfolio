@@ -24,7 +24,7 @@ export default function Hero() {
               Hey, I&apos;m
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 {" "}
-                Sanidhya Mehra.
+                Haseeb Asif.
               </span>
             </h1>
           </motion.div>
@@ -50,7 +50,7 @@ export default function Hero() {
             
 
             <a
-              href="https://www.linkedin.com/in/sanidhya-mehra-a0310a25b/"
+              href="https://www.linkedin.com/in/haseeb-asif-5b0a18370/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 border text-white border-purple-500 hover:bg-purple-500/20 rounded-md text-sm font-medium transition-colors"

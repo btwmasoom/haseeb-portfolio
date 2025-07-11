@@ -17,7 +17,7 @@ export default function Footer() {
           <Link href="https://github.com/sanidhya-Git" target="_blank" rel="noreferrer" aria-label="GitHub">
             <Github className="h-5 w-5" />
           </Link>
-          <Link href="https://www.linkedin.com/in/sanidhya-mehra-a0310a25b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <Link href="https://www.linkedin.com/in/haseeb-asif-5b0a18370/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <Linkedin className="h-5 w-5" />
           </Link>
           <Link href="mailto:sanidhya.web@gmail.com" aria-label="Email">

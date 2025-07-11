@@ -2,16 +2,17 @@ import Hero from "@/components/hero";
 import Contact from "@/components/contact";
 import ExperienceTimeline from "@/components/experience";
 import ProjectCard from "@/components/project";
-import {  GithubIcon, Linkedin, Mail } from "lucide-react";
+import {  Linkedin } from "lucide-react";
 import { Client } from "@/components/client";
-
+import { Github } from "lucide-react";
+import {Mail} from "lucide-react";
 export default function Home() {
   return (
     <main className="min-h-screen">
-    
-      <Hero /> 
+      <Hero />
       <ProjectCard />
-      <Client/>
+      <Client />
+
       <section id="experience" className="py-20 px-4 bg-black/80">
         <div className="container max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -44,43 +45,45 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-violet-400" />
                   <a
-                    href="mailto:Sanidhya.web@gmail.com"
+                    href="mailto:haseebasif.edu@gmail.com"
                     className="text-white "
                   >
-                    Sanidhya.web@gmail.com
+                    Haseebasif.edu@gmail.com
                   </a>
                 </div>
+
                 <div className="flex items-center gap-3">
-                  <GithubIcon className="h-5 w-5 text-violet-400" />
+                  <Github className="h-5 w-5 text-violet-400" />
                   <a
-                    href="https://github.com/Sanidhya-git"
+                    href="https://github.com/btwmasoom"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white "
                   >
-                    Sanidhya-git
+                    btwmasoom-git
                   </a>
                 </div>
+
                 <div className="flex items-center gap-3">
                   <Linkedin className="h-5 w-5 text-violet-400" />
                   <a
-                    href="https://www.linkedin.com/in/sanidhya-mehra"
+                    href="https://www.linkedin.com/in/haseeb-asif-5b0a18370"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white "
                   >
-                    Sanidhya Mehra
+                    Haseeb Asif
                   </a>
                 </div>
               </div>
 
               <h3 className="text-xl font-semibold mt-8 mb-4">Location</h3>
-              <p>Jaipur, Rajasthan</p>
+              <p>Multan , Punjab , Pakistan</p>
               <p className="text-gray-400 mt-2">
                 Available for remote work worldwide
               </p>
             </div>
-            
+
             <Contact />
           </div>
         </div>
