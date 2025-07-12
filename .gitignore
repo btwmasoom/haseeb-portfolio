@@ -126,11 +126,14 @@ dist
 .vscode-test
 
 # yarn v3
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
 /.pnp
+=======
+>>>>>>> 471fff92b94d26852f39e3806a392463e8f428ef
 .pnp.*
 .yarn/*
 !.yarn/patches

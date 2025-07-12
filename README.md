@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 Haseeb Asif — Developer Portfolio
 
 Welcome to my personal developer portfolio!  
@@ -60,3 +61,7 @@ npx build next
 
 # Run development server
 npm start
+=======
+# My_portfolio
+🚀 Full-Stack Developer | MERN Stack | UI/UX Lover | Python &amp; Java Geek | Secure APIs | Responsive Web Apps | Clean Code | Problem Solver | Tech Explorer | Firebase | MongoDB | React | Node | Next.js | Always building something awesome! 💻⚡
+>>>>>>> 471fff92b94d26852f39e3806a392463e8f428ef
