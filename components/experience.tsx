@@ -6,29 +6,30 @@ import { BriefcaseIcon } from "lucide-react"
 export default function ExperienceTimeline() {
   const experiences = [
     {
-      title: "Software Developer  ",
-      company: "WealthVisory",
-      period: "3 months",
-      description:
-        "Developed a web-based investment management platform enabling clients to track and analyze real-time stocks, mutual funds, and SIPs for informed, data-driven portfolio decisions. wealthvisory.in",
-      technologies: [],
-    },
-    {
-      title: "",
-      company: "",
-      period: "",
-      description:
-        "",
-      technologies: [],
-    },
-    {
-      title: "",
-      company: "",
-      period: "",
-      description:
-        "",
-      technologies: [],
-    },
+  title: "MERN Stack Developer Intern",
+  company: "We Tech (Vehari)",
+  period: "3 Months",
+  description:
+    "Contributed to multiple full-stack projects using the MERN stack, focusing on real-world applications and rapid feature delivery in a fast-paced startup environment. Strengthened core development skills and agile practices by building scalable modules and dynamic UIs.",
+  technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+},
+{
+  title: "Freelance AI Developer",
+  company: "Lavender Software House (Remote)",
+  period: "6 Months",
+  description:
+    "Built custom AI-powered desktop applications using Python, including intelligent talking bots and travel assistant agents with GUI interfaces developed in Tkinter and PyQt5. Delivered complete offline solutions tailored to client requirements, ensuring smooth user interaction and responsive design.",
+  technologies: ["Python", "Tkinter", "PyQt5", "AI Logic", "GitHub"],
+},
+
+{
+  title: "Final Year Project - Social Media App",
+  company: "COMSATS University (Vehari Campus)",
+  period: "2024",
+  description:
+    "Led the development of 'COMSATS Hub' — a dedicated social media platform tailored for COMSATS students to connect, share resources, form study groups, and stay updated with campus events. Integrated secure authentication, real-time chat, and post sharing features in a modern, scalable design.",
+  technologies: ["React", "Node.js", "Express.js", "MongoDB", "Socket.io", "JWT", "Tailwind CSS"],
+},
     
   ]
 

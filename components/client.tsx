@@ -6,14 +6,14 @@ import Image from "next/image";
 export const companies = [
   {
     id: 1,
-    name: "Cloudinary",
-    img: "/cloud.svg",
+    name: "JavaScript",
+    img: "/image 224.png",
   },
 
     {
     id: 2,
-    name: "Docker",
-    img: "/dock.svg",
+    name: "Tailwind CSS",
+    img: "/Tailwind CSS.svg",
   },
   {
     id: 3,

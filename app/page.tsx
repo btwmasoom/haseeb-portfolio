@@ -2,10 +2,9 @@ import Hero from "@/components/hero";
 import Contact from "@/components/contact";
 import ExperienceTimeline from "@/components/experience";
 import ProjectCard from "@/components/project";
-import {  Linkedin } from "lucide-react";
+import { Linkedin, Github, Mail } from "lucide-react";
 import { Client } from "@/components/client";
-import { Github } from "lucide-react";
-import {Mail} from "lucide-react";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -38,17 +37,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-xl font-semibold mb-4">
-                Contact Information
-              </h3>
+              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-violet-400" />
                   <a
                     href="mailto:haseebasif.edu@gmail.com"
-                    className="text-white "
+                    className="text-white hover:underline"
                   >
-                    Haseebasif.edu@gmail.com
+                    haseebasif.edu@gmail.com
                   </a>
                 </div>
 
@@ -58,7 +55,7 @@ export default function Home() {
                     href="https://github.com/btwmasoom"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white "
+                    className="text-white hover:underline"
                   >
                     btwmasoom-git
                   </a>
@@ -70,7 +67,7 @@ export default function Home() {
                     href="https://www.linkedin.com/in/haseeb-asif-5b0a18370"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white "
+                    className="text-white hover:underline"
                   >
                     Haseeb Asif
                   </a>

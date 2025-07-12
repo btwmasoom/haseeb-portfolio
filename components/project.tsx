@@ -1,56 +1,46 @@
 "use client";
 
 import Image from "next/image";
-// import { ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { StaticImageData } from "next/image";
-import rentalog from "@/public/images/rentalog.png";
-import secure from "@/public/images/Sercure.png";
-import sntclub from "@/public/images/sntclub.png";
-import skit from "@/public/images/skit.png";
-import image from "@/public/images/image.png";
-import wealthvisory from "@/public/images/wealthvisory.png";
+import ai from "@/public/images/ai.png"; // You can add actual image
+import travel from "@/public/images/travel.png";
+import security from "@/public/images/security.png";
+import movies from "@/public/images/movies.png";
+import Car from "@/public/images/Car.jpg";
+import Heena from "@/public/images/Henna.jpg";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: StaticImageData | string;
   tags: string[];
-  demoUrl: string;
-  githubUrl: string;
 }
 
-function ProjectItem({ title, description, image, tags, demoUrl, githubUrl }: ProjectCardProps) {
+function ProjectItem({ title, description, image, tags }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden bg-white/5 rounded-xl shadow-lg">
-      <Image src={image} alt={title} width={400} height={300} className="w-full object-cover" />
+      <Image
+        src={image}
+        alt={title}
+        width={400}
+        height={300}
+        className="w-full object-cover"
+      />
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
         <p className="text-sm text-gray-400 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="bg-violet-600 text-white">
+            <Badge
+              key={tag}
+              variant="secondary"
+              className="bg-violet-600 text-white"
+            >
               {tag}
             </Badge>
           ))}
-        </div>
-        <div className="flex justify-between items-center">
-          {demoUrl && (
-            <Button asChild variant="outline">
-              <a href={demoUrl} target="_blank" rel="noopener noreferrer">
-                Live Demo
-              </a>
-            </Button>
-          )}
-          {githubUrl && (
-            <Button asChild variant="outline">
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-            </Button>
-          )}
         </div>
       </CardContent>
     </Card>
@@ -60,55 +50,47 @@ function ProjectItem({ title, description, image, tags, demoUrl, githubUrl }: Pr
 export default function ProjectCard() {
   const projects: ProjectCardProps[] = [
     {
-      title: "WealthVisory",
-      description: "Developed a web-based investment management platform enabling clients to track and analyze real-time stocks, mutual funds, and SIPs for informed, data-driven portfolio decisions.",
-      image: wealthvisory,
-      tags: ["Vite","ReactJs", "Tailwind CSS" ,"ExpressJs"],
-      demoUrl: "https://www.wealthvisory.in/",
-      githubUrl: "", //"https://github.com/sanidhya-Git/snt-club.vercel.app",
+      title: "AI Talking Bot",
+      description:
+        "Voice-based AI assistant built using Python that interacts through speech. Integrated with OpenAI and built a GUI using Tkinter and PyQt5.",
+      image: ai,
+      tags: ["Python", "Tkinter", "PyQt5", "OpenAI API", "SpeechRecognition"],
     },
     {
-      title: "SNT-Club",
-      description: "Interactive platform for students to connect, collaborate, and learn.",
-      image: sntclub,
-      tags: ["ReactJs", "Tailwind CSS"],
-      demoUrl: "https://snt-club.vercel.app/",
-      githubUrl: "", //"https://github.com/sanidhya-Git/snt-club.vercel.app",
+      title: "AI-Based Travel Agent",
+      description:
+        "A smart AI agent that suggests destinations, calculates routes, and advises travel decisions using geolocation and AI-based logic.",
+      image: travel,
+      tags: ["Python", "NLP", "Geopy", "Tkinter", "PyQt5"],
     },
     {
-      title: "Secure Wallet",
-      description: "A web application for securely managing user's digital assets and transactions.",
-      image: secure,
-      tags: ["Nextjs", "clerk", "Tailwind CSS"],
-      demoUrl: "",
-      githubUrl: "",
-   
+      title: "Security App",
+      description:
+        "A security Agent that checks your system on its own an after anlysis shows protection techniques you need and automaticaly fixes all vulnerabilities like firewall e.t.c ",
+      image: security,
+      tags: ["Python", "NLP", "Geopy", "Tkinter", "PyQt5"],
     },
     {
-      title: "SKIT-Faculty Portal",
-      description: "Interactive platform for SKIT Faculty to manage their own records.",
-      image: skit,
-      tags: ["HTML", "CSS", "PHP", "JS"],
-      demoUrl: "https://testing-server.kistechnosoftware.com/skit/",
-      githubUrl: "",
+      title: "Movies site (Bluster Box )",
+      description:
+        "is a full-stack, Netflix-style movie streaming platform designed for seamless, high-quality entertainment. The platform allows users to explore and stream a vast collection of movies across various genres using external storage links (Wasabi, Google Drive, etc.). With a sleek UI and secure token-based streaming system, the site ensures smooth playback and optimal user experience across devices. ",
+      image: movies,
+      tags: ["MERN Stack", "React", "Node.js", "MongoDB", "Express", "JWT"],
     },
     {
-      title: "Rent Management System",
-      description: "A Full-Stack Rental Management System with various property management features.",
-      image: rentalog,
-      tags: ["ReactJs", "MongoDB", "Tailwind CSS"],
-      demoUrl: "https://rentalog.vercel.app/#home",
-      githubUrl: "", //"https://github.com/sanidhya-Git/rentalog",
-    },
-    {
-      title: "Trak-Twin",
-      description: "Interactive platform for tour and travel.",
-      image: image,
-      tags: ["HTML", "CSS", "PHP", "JS"],
-      demoUrl: "https://traktwin.vercel.app/",
-      githubUrl: "",
-    },
-
+  title: "AutoHub Showroom",
+  description:
+    "A fully responsive car showroom web application built with the MERN stack. Features include vehicle listings, detailed car pages, admin inventory management, customer inquiries, and secure login functionality.",
+  image: Car,
+  tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "JWT"],
+},
+{
+  title: "Pak Henna - Mehndi Art Studio",
+  description:
+    "A beautifully designed web platform for showcasing traditional and modern Mehndi designs. Includes online booking, service catalog, customer reviews, and gallery with elegant UI focused on aesthetics and accessibility.",
+  image: Heena, 
+  tags: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+}
   ];
 
   return (
@@ -125,12 +107,6 @@ export default function ProjectCard() {
             <ProjectItem key={index} {...project} />
           ))}
         </div>
-
-        {/* <div className="text-center mt-12">
-          <Button variant="outline" className="border-violet-600 text-violet-400 hover:bg-violet-950/50">
-            View All Projects <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div> */}
       </div>
     </section>
   );
