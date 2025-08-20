@@ -4,7 +4,7 @@
 Welcome to my personal developer portfolio!  
 A modern, animated, and responsive Next.js-based portfolio that showcases my skills, projects, work experience, and contact information — all in one powerful interface.
 
-[🌐 Live Preview](https://my-portfolio-haseeb-dev.vercel.app/)
+[🌐 Live Preview](https://haseebasif-portfolio.vercel.app/)
 
 ---
 
