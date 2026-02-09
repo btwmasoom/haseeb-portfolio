@@ -17,6 +17,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+import { useSettings } from "@/context/settings-context";
+
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
@@ -33,6 +35,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const { primaryColor, accentColor } = useSettings();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -49,7 +52,7 @@ export default function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     setIsSuccess(false);
-  
+
     try {
       const res = await fetch("/api/sendContact", {
         method: "POST",
@@ -58,7 +61,7 @@ export default function ContactForm() {
         },
         body: JSON.stringify(values),
       });
-  
+
       if (res.ok) {
         setIsSuccess(true);
         form.reset();
@@ -68,10 +71,10 @@ export default function ContactForm() {
     } catch (error) {
       console.error("Something went wrong:", error);
     }
-  
+
     setIsSubmitting(false);
   }
-  
+
 
   return (
     <Form {...form}>
@@ -86,7 +89,18 @@ export default function ContactForm() {
                 <Input
                   placeholder="Your name"
                   {...field}
-                  className="bg-black/50 border-violet-900/30 focus-visible:ring-violet-500"
+                  className="bg-black/50 transition-all duration-300"
+                  style={{
+                    borderColor: `${primaryColor}20`,
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = primaryColor;
+                    e.currentTarget.style.boxShadow = `0 0 0 2px ${primaryColor}20`;
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = `${primaryColor}20`;
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 />
               </FormControl>
               <FormMessage />
@@ -105,7 +119,18 @@ export default function ContactForm() {
                   placeholder="your.email@example.com"
                   type="email"
                   {...field}
-                  className="bg-black/50 border-violet-900/30 focus-visible:ring-violet-500"
+                  className="bg-black/50 transition-all duration-300"
+                  style={{
+                    borderColor: `${primaryColor}20`,
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = primaryColor;
+                    e.currentTarget.style.boxShadow = `0 0 0 2px ${primaryColor}20`;
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = `${primaryColor}20`;
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 />
               </FormControl>
               <FormMessage />
@@ -123,7 +148,18 @@ export default function ContactForm() {
                 <Input
                   placeholder="What is this regarding?"
                   {...field}
-                  className="bg-black/50 border-violet-900/30 focus-visible:ring-violet-500"
+                  className="bg-black/50 transition-all duration-300"
+                  style={{
+                    borderColor: `${primaryColor}20`,
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = primaryColor;
+                    e.currentTarget.style.boxShadow = `0 0 0 2px ${primaryColor}20`;
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = `${primaryColor}20`;
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 />
               </FormControl>
               <FormMessage />
@@ -141,7 +177,18 @@ export default function ContactForm() {
                 <Textarea
                   placeholder="Your message..."
                   {...field}
-                  className="bg-black/50 border-violet-900/30 focus-visible:ring-violet-500 min-h-[120px]"
+                  className="bg-black/50 transition-all duration-300 min-h-[120px]"
+                  style={{
+                    borderColor: `${primaryColor}20`,
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = primaryColor;
+                    e.currentTarget.style.boxShadow = `0 0 0 2px ${primaryColor}20`;
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = `${primaryColor}20`;
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 />
               </FormControl>
               <FormMessage />
@@ -150,9 +197,16 @@ export default function ContactForm() {
         />
 
         {isSuccess && (
-          <div className="p-3 rounded-md bg-violet-900/30 border border-violet-500/30 text-violet-200">
+          <div
+            className="p-3 rounded-md border backdrop-blur-md"
+            style={{
+              backgroundColor: `${primaryColor}10`,
+              borderColor: `${primaryColor}30`,
+              color: primaryColor
+            }}
+          >
             <p className="text-sm font-medium">Message sent successfully!</p>
-            <p className="text-xs mt-1">
+            <p className="text-xs mt-1 opacity-80">
               Thank you for reaching out. I&apos;ll get back to you soon.
             </p>
           </div>
@@ -161,7 +215,11 @@ export default function ContactForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-700 hover:to-cyan-700"
+          className="w-full text-white transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]"
+          style={{
+            backgroundImage: `linear-gradient(to right, ${primaryColor}, ${accentColor})`,
+            boxShadow: `0 4px 15px ${primaryColor}40`
+          }}
         >
           {isSubmitting ? (
             <>Sending...</>

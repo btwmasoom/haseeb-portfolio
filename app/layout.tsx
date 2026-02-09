@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   description: "Portfolio website showcasing my projects and skills as a full stack developer",
 };
 
+import { SettingsProvider } from "@/context/settings-context";
+import SettingsPanel from "@/components/settings-panel";
+import ChatWidget from "@/components/chat-widget";
+import Preloader from "@/components/preloader";
+
+// ... existing imports
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,10 +35,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <Toaster position="top-center" reverseOrder={false} />
-          {children}
-          <Footer />
+          <SettingsProvider>
+            <Preloader />
+            <Header />
+            <Toaster position="top-center" reverseOrder={false} />
+            {children}
+            <Footer />
+            <SettingsPanel />
+            <ChatWidget />
+          </SettingsProvider>
         </ThemeProvider>
       </body>
     </html>

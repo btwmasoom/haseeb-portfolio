@@ -1,8 +1,20 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { supabase } from "@/lib/supabase";
 
 export async function POST(req: Request) {
   const { name, email, subject, message } = await req.json();
+
+  // 1. Log to Supabase
+  try {
+    await supabase
+      .from('contact_messages')
+      .insert([
+        { name, email, subject, message, created_at: new Date().toISOString() }
+      ]);
+  } catch (err) {
+    console.error("Failed to log to Supabase:", err);
+  }
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -96,6 +108,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Email sending failed:", error);
-    return NextResponse.json({ success: false }, { status: 500 });
+    return NextResponse.json({ success: true, emailError: true });
   }
 }

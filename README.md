@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # 🚀 Haseeb Asif — Developer Portfolio
 
-Welcome to my personal developer portfolio!  
+Welcome to my personal developer portfolio!
 A modern, animated, and responsive Next.js-based portfolio that showcases my skills, projects, work experience, and contact information — all in one powerful interface.
 
 [🌐 Live Preview](https://haseebasif-portfolio.vercel.app/)
@@ -36,13 +35,14 @@ A modern, animated, and responsive Next.js-based portfolio that showcases my ski
 - **Icons:** Lucide React
 - **Deployment:** Vercel
 - **Email Handling:** EmailJS (or custom API)
+- **Skills:** Full-Stack Developer | MERN Stack | UI/UX Lover | Python & Java Geek | Secure APIs | Responsive Web Apps | Clean Code | Problem Solver | Tech Explorer | Firebase | MongoDB | React | Node | Next.js
 
 ---
 
 ## 📩 Contact Me
 
-📧 Email: [haseebasif.edu@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=haseebasif.edu@gmail.com)  
-🐙 GitHub: [btwmasoom-git](https://github.com/btwmasoom)  
+📧 Email: [haseebasif.edu@gmail.com](https://mail.google.com/mail/?view=cm&fs=1&to=haseebasif.edu@gmail.com)
+🐙 GitHub: [btwmasoom-git](https://github.com/btwmasoom)
 🔗 LinkedIn: [Haseeb Asif](https://www.linkedin.com/in/haseeb-asif-5b0a18370)
 
 ---
@@ -55,13 +55,10 @@ git clone https://github.com/btwmasoom/My_Portfolio.git
 
 # Install dependencies
 npm install
-# Build Next 
 
-npx build next 
+# Build Next
+npx next build
 
 # Run development server
-npm start
-=======
-# My_portfolio
-🚀 Full-Stack Developer | MERN Stack | UI/UX Lover | Python &amp; Java Geek | Secure APIs | Responsive Web Apps | Clean Code | Problem Solver | Tech Explorer | Firebase | MongoDB | React | Node | Next.js | Always building something awesome! 💻⚡
->>>>>>> 471fff92b94d26852f39e3806a392463e8f428ef
+npm run dev
+```
