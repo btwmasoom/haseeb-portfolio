@@ -5,7 +5,7 @@ import { useSettings } from "@/context/settings-context";
 
 export default function StarfieldBackground() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const { primaryColor } = useSettings();
+    const { } = useSettings();
 
     useEffect(() => {
         const canvas = canvasRef.current;

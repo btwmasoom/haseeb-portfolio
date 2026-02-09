@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { StaticImageData } from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { useRef } from "react";
+
 import ai from "@/public/images/ai.png";
 import travel from "@/public/images/travel.png";
 import security from "@/public/images/security.png";

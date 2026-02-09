@@ -1,8 +1,8 @@
-"use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { cn } from "@/lib/utils";
 import { useSettings } from "@/context/settings-context";
 
 const categories = ["All", "Frontend", "Backend", "AI & Automation", "Tools"] as const;
@@ -149,9 +149,11 @@ export default function Skills() {
                                             className="absolute inset-0 blur-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-500"
                                             style={{ background: skill.color }}
                                         />
-                                        <img
+                                        <Image
                                             src={skill.logo}
                                             alt={skill.name}
+                                            width={48}
+                                            height={48}
                                             className="w-full h-full object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]"
                                         />
                                     </div>
@@ -181,6 +183,4 @@ export default function Skills() {
     );
 }
 
-function cn(...inputs: any[]) {
-    return inputs.filter(Boolean).join(" ");
-}
+

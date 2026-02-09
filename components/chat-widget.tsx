@@ -210,7 +210,7 @@ export default function ChatWidget() {
                                             {["rounded", "sharp", "glass", "neon"].map((style) => (
                                                 <button
                                                     key={style}
-                                                    onClick={() => setChatBubbleStyle(style as any)}
+                                                    onClick={() => setChatBubbleStyle(style as "rounded" | "sharp" | "glass" | "neon")}
                                                     className={`px-3 py-2 text-xs rounded-lg border transition-all ${chatBubbleStyle === style
                                                         ? "border-2 text-white"
                                                         : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10"
@@ -266,7 +266,7 @@ export default function ChatWidget() {
                                         borderColor: `${primaryColor}30`
                                     }}>
                                         <p className="text-[10px] text-white/70 leading-relaxed italic">
-                                            "Design is not just what it looks like and feels like. Design is how it works."
+                                            &quot;Design is not just what it looks like and feels like. Design is how it works.&quot;
                                         </p>
                                     </div>
                                 </div>

@@ -72,7 +72,7 @@ export default function SettingsPanel() {
                                 <Label className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Background Effect</Label>
                                 <Select
                                     value={backgroundType}
-                                    onValueChange={(val: any) => setBackgroundType(val)}
+                                    onValueChange={(val: string) => setBackgroundType(val as any)}
                                 >
                                     <SelectTrigger className="w-full bg-white/5 border-white/10 text-white">
                                         <SelectValue placeholder="Select background" />

@@ -100,10 +100,11 @@ export async function POST(req: NextRequest) {
         });
 
         return LangChainAdapter.toDataStreamResponse(stream);
-    } catch (e: any) {
+    } catch (e: unknown) {
         console.error("Chat API Error:", e);
+        const errorMessage = e instanceof Error ? e.message : "An internal server error occurred";
         return NextResponse.json(
-            { error: e.message || "An internal server error occurred" },
+            { error: errorMessage },
             { status: 500 }
         );
     }

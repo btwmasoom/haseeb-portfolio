@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
-import { Menu, X, Settings, FileText, Terminal } from "lucide-react";
+import { Settings, FileText, Terminal } from "lucide-react";
 import { useSettings } from "@/context/settings-context";
 
 const SETTINGS_NOTIFICATIONS = [

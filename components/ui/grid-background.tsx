@@ -23,7 +23,7 @@ export default function GridBackground() {
             ctx.clearRect(0, 0, w, h);
 
             const gridSize = 50;
-            const perspective = 300; // Lower is more extreme perspective
+
 
             ctx.fillStyle = "rgba(0, 0, 0, 0.9)";
             ctx.fillRect(0, 0, w, h);
