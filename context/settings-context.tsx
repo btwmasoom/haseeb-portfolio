@@ -2,7 +2,8 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-type BackgroundType = "particles" | "grid" | "waves" | "wallpaper" | "static" | "matrix" | "starfield" | "bokeh" | "circuit" | "gradient-flow" | "shapes";
+export type BackgroundType = "particles" | "grid" | "waves" | "wallpaper" | "static" | "matrix" | "starfield" | "bokeh" | "circuit" | "gradient-flow" | "shapes";
+export type ChatBubbleStyle = "rounded" | "sharp" | "glass" | "neon";
 
 interface SettingsContextType {
     glassOpacity: number;
@@ -26,8 +27,8 @@ interface SettingsContextType {
     setIsSettingsOpen: (val: boolean) => void;
 
     // Chatbot Settings
-    chatBubbleStyle: "rounded" | "sharp" | "glass" | "neon";
-    setChatBubbleStyle: (style: "rounded" | "sharp" | "glass" | "neon") => void;
+    chatBubbleStyle: ChatBubbleStyle;
+    setChatBubbleStyle: (style: ChatBubbleStyle) => void;
     chatUserColor: string;
     setChatUserColor: (color: string) => void;
     chatBotColor: string;
@@ -63,7 +64,7 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
     );
     const [wallpaper, setWallpaper] = useState(defaultSettings.wallpaper);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-    const [chatBubbleStyle, setChatBubbleStyle] = useState<"rounded" | "sharp" | "glass" | "neon">(defaultSettings.chatBubbleStyle);
+    const [chatBubbleStyle, setChatBubbleStyle] = useState<ChatBubbleStyle>(defaultSettings.chatBubbleStyle);
     const [chatUserColor, setChatUserColor] = useState(defaultSettings.chatUserColor);
     const [chatBotColor, setChatBotColor] = useState(defaultSettings.chatBotColor);
     const [chatHeaderColor, setChatHeaderColor] = useState(defaultSettings.chatHeaderColor);

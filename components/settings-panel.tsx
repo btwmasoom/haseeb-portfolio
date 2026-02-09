@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X, RotateCcw } from "lucide-react";
-import { useSettings } from "@/context/settings-context";
+import { useSettings, BackgroundType } from "@/context/settings-context";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
@@ -72,7 +72,7 @@ export default function SettingsPanel() {
                                 <Label className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Background Effect</Label>
                                 <Select
                                     value={backgroundType}
-                                    onValueChange={(val: string) => setBackgroundType(val as any)}
+                                    onValueChange={(val: string) => setBackgroundType(val as BackgroundType)}
                                 >
                                     <SelectTrigger className="w-full bg-white/5 border-white/10 text-white">
                                         <SelectValue placeholder="Select background" />
